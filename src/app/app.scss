@@ -14,3 +14,55 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    //justify-content: center; added specific for login
+  
+  }
+  .home-container > .row {
+    -webkit-flex: 1;
+    //-webkit-align-items: center;
+     align-items: center;
+     justify-content:center;
+  
+  }
+ion-header {
+    .button-md {
+      box-shadow: none;
+    }
+  }
+  .bar-header{
+    height: 90px;
+    color: #ffff00;
+  }
+
+
+  ////toolbar title at center
+.title.title-md {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title.title-ios {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.toolbar-title {
+  color: #ffffff;
+  text-transform: uppercase;
+}

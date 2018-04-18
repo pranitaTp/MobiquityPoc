@@ -1,3 +1,25 @@
 page-home {
+    .iconAlign{
+        text-align: center;
+        margin: 10px;
 
+    }
+    .selectAlign
+    {
+        text-align: center;
+        margin-right: 10px;
+        padding-right:10px; 
+
+    }
+    ion-item, ion-select  //make drop down icon in right and whole width
+    {
+      padding: 0px;
+      margin:0px;
+      max-width: 100%;
+      
+      -webkit-flex: 1;
+      
+      text-align: center;
+   }
+   
 }

@@ -1,0 +1,63 @@
+page-article-by-category {
+
+    
+    .content {
+        background-color: #f4f4f7;
+      }
+      .item-avatar  {     
+        width:100% !important;  
+        height : 100% !important;  
+        max-width: 100px !important;  //any size
+        max-height: 100px !important; //any size 
+        }
+      .posts-load-spinner {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    
+        * {
+          stroke: color($colors, primary);
+        }
+      }
+    
+      .posts-page-navbar {
+        .toolbar-title-md {
+          margin-left: -25px;
+        }
+      }
+    
+     
+    
+      .post-title {
+        text-align: center;
+      }
+    
+      .post-card-content {
+          &:active{
+            background-color: #f9f9f9;
+          }
+      }
+    
+      .post-author {
+        position: relative;
+        top: 5px;
+        text-align: center
+      }
+    
+      .score-icon {
+        position: relative;
+        top: 2px;
+        margin-right: 2px;
+      }
+    
+      .side-menu {
+        .menu-go-button {
+          width: 65%;
+          margin: 5px auto;
+        }
+        
+      }
+}

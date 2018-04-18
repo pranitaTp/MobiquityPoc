@@ -1,0 +1,48 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{this.category}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-spinner *ngIf="!loadCompleted" name="crescent" class="posts-load-spinner"></ion-spinner>
+
+  <ion-card *ngFor="let post of posts">
+      <ion-item>
+          <ion-avatar item-start>
+          <img [src]="getAutherThumbnail(post)">
+          </ion-avatar>
+
+          <ion-card-content (click)="readPost(post)" class="post-card-content">
+            <ion-card-title text-wrap class="post-title"><span>{{post.title}}</span></ion-card-title>
+       
+            <p class="post-author">
+            submitted {{(post.created_utc | amFromUnix) | amTimeAgo }}, by {{post.author}}
+            </p>
+         </ion-card-content>
+  
+        <ion-row>
+
+          <ion-col center text-center>
+          <ion-note>
+          <ion-icon name="thumbs-up" class="score-icon"></ion-icon>
+          <span>{{post.score}}</span>
+          </ion-note>
+          </ion-col>
+
+          <ion-col>
+          <button ion-button icon-left clear small color="primary" (click)="goToComments(post)">
+          <ion-icon name="ios-text-outline"></ion-icon>
+          <span>{{post.num_comments}}</span>
+          </button>
+        </ion-col>
+
+      </ion-row>
+      
+  </ion-item>
+  </ion-card>
+</ion-content>

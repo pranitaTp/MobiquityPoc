@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home-container">
+    <form [formGroup]="formGrp">
+  <ion-item>
+    <ion-label floating>Email Address</ion-label>
+    <ion-input type="text" [(ngModel)]="user.email" formControlName="userName" required name="fUserName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password" formControlName="password" required name="fPassword"></ion-input>
+  </ion-item>
+
+ <ion-row style="padding-top:16px">
+   <ion-col>
+  <button  ion-button color="light" flex-center block [disabled]="!formGrp.valid"
+  [ngClass]="{'btnValid': formGrp.valid, 'btnInvalid': !formGrp.valid }" (click)="login(user)">Login</button>
+
+</ion-col>
+<ion-col>
+  <button ion-button color="light" flex-center block [disabled]="!formGrp.valid" [ngClass]="{'btnValid': formGrp.valid, 'btnInvalid': !formGrp.valid }" (click)="register(user)">SIGN UP</button>
+</ion-col>
+</ion-row>
+</form>
+</ion-content>
